@@ -18,7 +18,7 @@
 <link rel="preload" href="assets/fonts/Lexend.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400&family=Noto+Serif+JP:wght@400&family=Shippori+Mincho:wght@600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* Akira Inami Design System — fonts */
 @font-face { font-family: "Gilda Display"; font-style: normal; font-weight: 400; font-display: swap; src: url("assets/fonts/GildaDisplay-400.woff2") format("woff2"); }
@@ -170,6 +170,7 @@ h1 {
 .work-body { display: flex; flex-direction: column; gap: 8px; flex-grow: 1; padding: 22px 24px 24px; }
 .work-kind { font-size: 12px; font-weight: 500; color: var(--ink-3); letter-spacing: .06em; }
 .work-name { font-family: var(--font-serif); font-size: 21px; font-weight: 600; line-height: 1.5; letter-spacing: .03em; color: var(--navy-800); }
+.grid > li:nth-child(n+2) .work-name { font-family: "Fraunces", "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif; font-weight: 400; }
 .work-note { flex-grow: 1; font-size: 14px; color: var(--ink-2); text-wrap: pretty; }
 .work-open {
   margin-top: 12px; padding-top: 14px; border-top: 1px solid var(--mist);
