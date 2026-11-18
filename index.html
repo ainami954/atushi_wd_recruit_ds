@@ -148,7 +148,7 @@ h1 {
 .notice a { white-space: nowrap; margin-left: 4px; }
 
 /* 一覧 */
-.works { max-width: 1120px; margin: 0 auto; padding: 64px 20px 0; }
+.works { background: var(--paper); padding: 64px max(20px, calc((100% - 1080px) / 2)) 80px; }
 .works-head {
   display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
   padding-bottom: 14px; margin-bottom: 32px; border-bottom: 2px solid var(--navy-800);
@@ -188,7 +188,7 @@ h1 {
 }
 
 /* フッター */
-.site-footer { margin-top: 96px; position: relative; overflow: hidden; background: var(--navy-800); color: var(--white); }
+.site-footer { position: relative; overflow: hidden; background: var(--navy-800); color: var(--white); }
 .contact-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: clamp(20px, 4vw, 40px) clamp(16px, 3vw, 24px); }
 .contact-frame { border: 3px solid var(--rule-on-dark); display: flex; flex-direction: column; }
 .contact-body {
