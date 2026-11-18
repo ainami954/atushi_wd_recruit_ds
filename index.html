@@ -86,10 +86,10 @@ img { max-width: 100%; display: block; }
 .motif { position: absolute; inset: 0; pointer-events: none; }
 .motif-hero {
   background:
-    radial-gradient(circle at 108% -8%, transparent 38%, var(--motif-on-dark) 38.3%, var(--motif-on-dark) 40.5%, transparent 40.8%),
-    radial-gradient(circle at -18% 118%, transparent 46%, var(--motif-on-dark) 46.3%, var(--motif-on-dark) 48.5%, transparent 48.8%),
-    linear-gradient(90deg, transparent 63%, var(--motif-on-dark) 63%, var(--motif-on-dark) 63.3%, transparent 63.3%),
-    linear-gradient(0deg, transparent 22%, var(--motif-on-dark) 22%, var(--motif-on-dark) 22.4%, transparent 22.4%);
+    radial-gradient(circle at 108% -8%, transparent 38%, var(--motif-on-light) 38.3%, var(--motif-on-light) 40.5%, transparent 40.8%),
+    radial-gradient(circle at -18% 118%, transparent 46%, var(--motif-on-light) 46.3%, var(--motif-on-light) 48.5%, transparent 48.8%),
+    linear-gradient(90deg, transparent 63%, var(--motif-on-light) 63%, var(--motif-on-light) 63.3%, transparent 63.3%),
+    linear-gradient(0deg, transparent 22%, var(--motif-on-light) 22%, var(--motif-on-light) 22.4%, transparent 22.4%);
 }
 .motif-contact {
   background:
@@ -130,22 +130,21 @@ img { max-width: 100%; display: block; }
 }
 
 /* 導入（ヒーロー） */
-.hero { position: relative; overflow: hidden; background: var(--navy-800); color: var(--white); }
-.hero-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: clamp(20px, 4vw, 40px) clamp(16px, 3vw, 24px); }
-.hero-frame { border: 3px solid var(--rule-on-dark); padding: clamp(40px, 7vw, 88px) clamp(24px, 6vw, 72px); }
+.hero { position: relative; overflow: hidden; background: var(--white); color: var(--ink); border-bottom: 1px solid var(--mist); }
+.hero-inner { position: relative; max-width: 1120px; margin: 0 auto; padding: clamp(48px, 8vw, 88px) 20px clamp(40px, 6vw, 64px); }
 .hero-text { max-width: 760px; display: flex; flex-direction: column; gap: 28px; }
-.hero .eyebrow { color: var(--white); }
+.hero-text > .lede, .hero-text > .notice { max-width: 720px; }
+.hero .eyebrow { color: var(--navy-800); font-size: 14px; }
 h1 {
   margin: 0; font-family: var(--font-serif); font-weight: 600;
-  font-size: clamp(32px, 6.4vw, 64px); line-height: 1.35; letter-spacing: .04em;
+  font-size: clamp(22px, calc((100vw - 40px) / 11.6), 64px); line-height: 1.35; letter-spacing: .04em;
   text-wrap: balance;
 }
-.lede { margin: 0; font-size: 17px; color: var(--text-on-dark-muted); text-wrap: pretty; }
+.hero h1 { white-space: nowrap; }
+.hero h1 { color: var(--ink); }
+.lede { margin: 0; font-size: 17px; color: var(--ink-2); text-wrap: pretty; }
 
-.notice { position: relative; background: var(--white); color: var(--ink-2); }
-.notice-inner { max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; gap: 16px; align-items: flex-start; }
-.notice-inner .icon { margin-top: 4px; color: var(--navy-800); }
-.notice p { margin: 0; font-size: 13.5px; line-height: 1.85; }
+.notice { margin: 0; padding: 14px 18px; background: var(--mist); color: var(--ink-2); font-size: 13.5px; line-height: 1.85; }
 .notice a { white-space: nowrap; margin-left: 4px; }
 
 /* 一覧 */
@@ -240,18 +239,11 @@ h1 {
   <section class="hero">
     <div class="motif motif-hero" aria-hidden="true"></div>
     <div class="hero-inner">
-      <div class="hero-frame">
-        <div class="hero-text">
-          <p class="eyebrow">Webサイト制作（勉強中）</p>
-          <h1>江南区のお店のための、<br>デザイン案。</h1>
-          <p class="lede">新潟市江南区・亀田周辺のお店に向けて、提案用につくったWebサイトのデザイン案です。気になるものを開くと、実際に動くページを見られます。</p>
-        </div>
-      </div>
-    </div>
-    <div class="notice">
-      <div class="notice-inner">
-        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        <p>掲載しているのは、各店舗へのご提案のために、私が自主的に作成したデザインのサンプルです。ご依頼を受けて制作したものではなく、お店の公式サイトでもありません。写真・文章には仮のものを含みます。<a href="#about-samples">詳しくはこちら</a></p>
+      <div class="hero-text">
+        <p class="eyebrow">Webサイト制作（勉強中）</p>
+        <h1>江南区のお店のための、<br>デザイン案。</h1>
+        <p class="lede">新潟市江南区・亀田周辺のお店に向けて、提案用につくったWebサイトのデザイン案です。気になるものを開くと、実際に動くページを見られます。</p>
+        <p class="notice">掲載しているのは、各店舗へのご提案のために、私が自主的に作成したデザインのサンプルです。ご依頼を受けて制作したものではなく、お店の公式サイトでもありません。写真・文章には仮のものを含みます。<a href="#about-samples">詳しくはこちら</a></p>
       </div>
     </div>
   </section>
