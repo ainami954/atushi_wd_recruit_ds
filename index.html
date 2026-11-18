@@ -202,13 +202,13 @@ h1 {
   font-size: clamp(24px, 3.6vw, 36px); line-height: 1.5; letter-spacing: .05em;
 }
 .contact-text p { margin: 0; color: var(--text-on-dark-muted); font-size: 15px; text-wrap: pretty; }
-.contact-info { display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+.contact-info { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; font-size: 15px; }
 .contact-label { font-size: 12px; letter-spacing: var(--ls-eyebrow); color: var(--text-on-dark-muted); }
 .contact-place { display: flex; align-items: center; gap: 10px; }
 .contact-mail {
-  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 14px;
-  padding: 22px 24px; background: var(--white); color: var(--navy-800);
-  font-size: clamp(15px, 2vw, 18px); font-weight: 500; letter-spacing: .08em;
+  display: inline-block; max-width: 100%; margin: 4px 0;
+  padding: 12px 24px; background: var(--white); color: var(--navy-800);
+  font-size: 15px; font-weight: 500; letter-spacing: .04em;
   text-decoration: none; word-break: break-all;
   opacity: .92; transition: opacity var(--dur-med) var(--ease-out);
 }
@@ -339,16 +339,13 @@ h1 {
         </div>
         <div class="contact-info">
           <span class="contact-label">連絡先</span>
+          <a class="contact-mail" href="mailto:atushi_i@diligence.jp">atushi_i@diligence.jp</a><!-- ★2 -->
           <span class="contact-place">
             <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
             <span>新潟市江南区</span>
           </span>
         </div>
       </div>
-      <a class="contact-mail" href="mailto:atushi_i@diligence.jp"><!-- ★2 -->
-        <svg class="icon" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        <span>atushi_i@diligence.jp</span>
-      </a>
     </div>
   </div>
 
